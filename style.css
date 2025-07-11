@@ -1,0 +1,142 @@
+body {
+  background: url('/static/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  background: linear-gradient(135deg, #000000dd, #404040cc, #1e3c5acc);
+  padding: 30px 40px;
+  border-radius: 18px;
+  max-width: 720px;
+  width: 100%;
+  color: #ddd;
+  box-shadow:
+    0 8px 30px rgba(0,0,0,0.6),
+    0 0 8px rgba(30,60,90,0.7);
+  animation: fadeInUp 1s ease forwards;
+  margin-right: 400px; /* space so text container doesn't overlap Discord widget */
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e0e7ff;
+  animation: fadeInDown 1s ease forwards;
+}
+
+p, ul, li {
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+a {
+  color: #7db9ff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #a0c8ff;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 15px 0;
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li strong {
+  display: block;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #bbb;
+}
+
+li em {
+  font-style: italic;
+  color: #999;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Discord fixed widget on top right */
+#discord-fixed {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 350px;
+  height: 500px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  z-index: 9999;
+  background: linear-gradient(135deg, #000000dd, #404040cc, #1e3c5acc);
+  border: 1px solid rgba(125, 185, 255, 0.3);
+  overflow: hidden;
+}
+
+#discord-fixed iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  border: none;
+}
